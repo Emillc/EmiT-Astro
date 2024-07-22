@@ -23,13 +23,15 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.23.2",
+    "@unocss/eslint-plugin": "0.61.5",
     "astro-icon": "1.1.0",
     "eslint": "9.7.0",
     "eslint-plugin-astro": "1.2.3",
     "eslint-plugin-format": "0.1.2",
     "fontmin": "1.1.0",
     "lint-staged": "15.2.7",
-    "simple-git-hooks": "2.11.1"
+    "simple-git-hooks": "2.11.1",
+    "unocss": "0.61.5"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
