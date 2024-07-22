@@ -1,0 +1,42 @@
+{
+  "name": "emit-astro",
+  "displayName": "EmiT-Astro",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "fontmin": "node ./scripts/fontmin",
+    "postinstall": "simple-git-hooks",
+    "postbuild": "pnpm fontmin"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.5.8",
+    "astro": "4.12.2",
+    "typescript": "5.5.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.23.2",
+    "astro-icon": "1.1.0",
+    "eslint": "9.7.0",
+    "eslint-plugin-astro": "1.2.3",
+    "eslint-plugin-format": "0.1.2",
+    "fontmin": "1.1.0",
+    "lint-staged": "15.2.7",
+    "simple-git-hooks": "2.11.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,astro}": [
+      "eslint --fix"
+    ]
+  }
+}
