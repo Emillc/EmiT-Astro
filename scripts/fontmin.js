@@ -1,7 +1,12 @@
 #!/usr/bin/env node
+// @ts-check
 import fs from 'node:fs'
 import Fontmin from 'fontmin'
 
+/**
+ * @param {fs.PathLike} dir - The directory to search.
+ * @returns {string[]} - An array of file paths.
+ */
 function getFiles(dir) {
   const results = []
   const files = fs.readdirSync(dir)
@@ -15,6 +20,10 @@ function getFiles(dir) {
   return results
 }
 
+/**
+ * @param {fs.PathLike} dir - The directory to search.
+ * @returns {Set<string>} - A set of unique characters.
+ */
 function scanDir(dir) {
   let set = new Set()
   const files = getFiles(dir)
@@ -34,6 +43,10 @@ function scanDir(dir) {
   return set
 }
 
+/**
+ * @param {string} finalString - The final string to generate the final HTML.
+ * @returns {void}
+ */
 function generateFinalHTML(finalString) {
   const fontmin = new Fontmin()
     .src('./public/fonts/*')
@@ -51,6 +64,9 @@ function generateFinalHTML(finalString) {
   })
 }
 
+/**
+ * @returns {void}
+ */
 function main() {
   const set = scanDir('src')
   const finalString = Array.from(set).join('')
