@@ -3,35 +3,25 @@
 import fs from 'node:fs'
 import Fontmin from 'fontmin'
 
+import { getFiles } from './utils.js'
+
 /**
- * @param {fs.PathLike} dir - The directory to search.
- * @returns {string[]} - An array of file paths.
+ * @type {string[]}
  */
-function getFiles(dir) {
-  const results = []
-  const files = fs.readdirSync(dir)
-
-  for (const f of files) {
-    const path = `${dir}/${f}`
-    const stat = fs.statSync(path)
-    stat.isDirectory() ? results.push(...getFiles(path)) : results.push(path)
-  }
-
-  return results
-}
+const targetFontExts = ['.ttf', '.otf', '.woff', '.woff2', '.eot']
 
 /**
  * @param {fs.PathLike} dir - The directory to search.
+ * @param {string[]} [exts] - The fonts extensions to ignore.
  * @returns {Set<string>} - A set of unique characters.
  */
-function scanDir(dir) {
+function scanDir(dir, exts = targetFontExts) {
+  /** @type {Set<string>} */
   let set = new Set()
   const files = getFiles(dir)
 
   for (const f of files) {
-    const fontExts = ['.ttf', '.otf', '.woff', '.woff2', '.eot']
-
-    if (fontExts.some(ext => f.endsWith(ext)))
+    if (exts.some(ext => f.endsWith(ext)))
       continue
 
     const content = fs.readFileSync(f, 'utf-8')
@@ -67,7 +57,7 @@ function generateFinalHTML(finalString) {
 /**
  * @returns {void}
  */
-function main() {
+function fontmin() { // TODO refactor this function in async/await
   const set = scanDir('src')
   const finalString = Array.from(set).join('')
 
@@ -76,4 +66,4 @@ function main() {
   console.log('font minified!')
 }
 
-main()
+fontmin()

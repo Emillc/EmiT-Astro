@@ -11,6 +11,7 @@
     "astrojs",
     "Attributify",
     "fontmin",
+    "lightningcss",
     "postbuild"
   ]
 }
