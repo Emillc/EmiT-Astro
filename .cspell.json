@@ -13,7 +13,8 @@
     "chillcicada",
     "fontmin",
     "lightningcss",
-    "postbuild"
+    "postbuild",
+    "unocss"
   ],
   "enableFiletypes": [
     "astro"
