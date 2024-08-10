@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "sync": "astro sync",
     "astro": "astro",
+    "astro:up": "npx @astrojs/upgrade",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "fontmin": "node ./scripts/fontmin",
@@ -41,7 +42,7 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,astro}": [
+    "*.{js,ts,astro,json}": [
       "eslint --fix"
     ]
   }

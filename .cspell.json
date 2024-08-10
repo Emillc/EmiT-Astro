@@ -10,8 +10,12 @@
     "astro",
     "astrojs",
     "Attributify",
+    "chillcicada",
     "fontmin",
     "lightningcss",
     "postbuild"
+  ],
+  "enableFiletypes": [
+    "astro"
   ]
 }
