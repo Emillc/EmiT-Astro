@@ -4,14 +4,19 @@
   "ignorePaths": [
     "node_modules",
     "dist",
-    "**/.*"
+    "**/.*",
+    "pnpm-lock.yaml"
   ],
   "words": [
+    "antfu",
     "astro",
     "astrojs",
     "Attributify",
     "chillcicada",
+    "commitlint",
+    "divriots",
     "fontmin",
+    "jampack",
     "lightningcss",
     "postbuild",
     "unocss"
