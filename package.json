@@ -21,17 +21,17 @@
     "postbuild": "node ./scripts/fontmin && jampack ./dist && node ./scripts/postbuild"
   },
   "dependencies": {
-    "astro": "4.15.9"
+    "astro": "4.15.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.7.3",
-    "@astrojs/check": "0.9.3",
+    "@astrojs/check": "0.9.4",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@divriots/jampack": "0.28.0",
     "@types/html-minifier": "4.0.5",
     "@types/node": "22.7.4",
-    "@unocss/eslint-plugin": "0.63.0",
+    "@unocss/eslint-plugin": "0.63.3",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.11.1",
@@ -44,7 +44,7 @@
     "simple-git-hooks": "2.11.1",
     "terser": "5.34.1",
     "typescript": "5.6.2",
-    "unocss": "0.63.0"
+    "unocss": "0.63.3"
   },
   "config": {
     "commitizen": {
