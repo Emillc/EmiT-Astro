@@ -31,7 +31,7 @@
     "@divriots/jampack": "0.33.0",
     "@types/html-minifier": "4.0.5",
     "@types/node": "22.13.4",
-    "@unocss/eslint-plugin": "0.65.4",
+    "@unocss/eslint-plugin": "66.0.0",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.20.1",
@@ -44,7 +44,7 @@
     "simple-git-hooks": "2.11.1",
     "terser": "5.39.0",
     "typescript": "5.7.3",
-    "unocss": "0.65.4"
+    "unocss": "66.0.0"
   },
   "config": {
     "commitizen": {
