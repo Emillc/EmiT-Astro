@@ -21,7 +21,7 @@
     "postbuild": "node ./scripts/fontmin && jampack ./dist && node ./scripts/postbuild"
   },
   "dependencies": {
-    "astro": "4.16.19"
+    "astro": "5.13.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.16.0",
