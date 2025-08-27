@@ -24,7 +24,7 @@
     "astro": "4.16.19"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.16.0",
+    "@antfu/eslint-config": "5.2.1",
     "@astrojs/check": "0.9.4",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
